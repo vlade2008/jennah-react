@@ -39,7 +39,7 @@ var Routes = (
             <Router history={enhanceHistory}>
                 <Route path ="/" component={App}>
                        <IndexRoute component={UserGrid}/>
-                      <Route path ="/user" component={Single}/>
+                      <Route path ="/user/:userID" component={Single}/>
                 </Route>
             </Router>
     </Provider>

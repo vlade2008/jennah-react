@@ -4,7 +4,7 @@ import Progress from "react-progress-2";
 import { routerActions } from 'react-router-redux'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import {userData} from '../actions/actionCreator';
+import {userData,postData} from '../actions/actionCreator';
 import User from './User';
 
 require('react-progress-2/main.css');
@@ -14,6 +14,7 @@ require('react-progress-2/main.css');
   constructor(props){
       super(props);
       this.props.get_user();
+      this.props.get_post();
     }
 
       componentDidMount(){
@@ -29,7 +30,6 @@ require('react-progress-2/main.css');
         {users.map((user,i)=>
           <User {...this.props} users={user} key={i} />
         )}
-
       </div>
     )
   }
@@ -37,12 +37,14 @@ require('react-progress-2/main.css');
 
 function mapStateToProps(state) {
     return {
-      users:state.user
+      users:state.user,
+      posts:state.post
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
+        get_post:bindActionCreators(postData,dispatch),
         get_user:bindActionCreators(userData,dispatch),
         routerActions: bindActionCreators(routerActions, dispatch)
 

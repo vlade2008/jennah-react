@@ -19,8 +19,7 @@ import {
 }  from 'react-router';
 
 //import the components
-import Single from '../components/Single'
-import UserGrid from '../components/UserGrid'
+import Index from '../components/Index'
 
 
 require('../fonts/sourcesanspro/css/fonts.css');
@@ -38,8 +37,7 @@ var Routes = (
     <Provider store={store}>
             <Router history={enhanceHistory}>
                 <Route path ="/" component={App}>
-                       <IndexRoute component={UserGrid}/>
-                      <Route path ="/user/:userID" component={Single}/>
+                       <IndexRoute component={Index}/>
                 </Route>
             </Router>
     </Provider>

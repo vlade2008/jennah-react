@@ -1,0 +1,54 @@
+Classes
+
+Airline / Hotel Reservation System -
+ Create a reservation system which books airline
+ seats or hotel rooms. It charges various rates for
+ particular sections of the plane or hotel. Example,
+ first class is going to cost more than coach. Hotel
+ rooms have penthouse suites which cost more. Keep track
+ of when rooms will be available and can be scheduled.
+
+
+Text
+
+Fizz Buzz - Write a program that prints the
+numbers from 1 to 100. But for multiples of
+three print “Fizz” instead of the number
+and for the multiples of five print “Buzz”.
+ For numbers which are multiples of both three
+ and five print “FizzBuzz”.
+
+Reverse a String - Enter a string and the program will reverse it and print it out.
+
+
+Count Vowels - Enter a string and the program
+counts the number of vowels in the text. For
+added complexity have it report a sum of each vowel found.
+
+
+Check if Palindrome - Checks if the string entered by
+the user is a palindrome. That is that it
+reads the same forwards as backwards like “racecar”
+
+
+React + Redux
+To do: Cinema App
+Description: Create an web application that is a reservation of seat in a cinema.
+Goals:
+
+- Create a list of movies
+- Every movie has different seats
+- Render the seats use an array not rendered via html.
+
+|-----|-----|-----|
+| a1 | b1 | c1 |
+|-----|-----|-----|
+| a2 | b2 | c2 |
+|-----|-----|-----|
+| a3 | b 3| c3 |
+|-----|-----|-----|
+
+
+- When clicking the seat, it will changed the color of the seat.
+- Show the list of not reserved seats and taken seats.
+- Use redux or flux for your data management

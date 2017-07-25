@@ -18,7 +18,6 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.14.0",
-    "babel-import-root": "git+https://github.com/albertoclarit/babel-import-root.git",
     "classnames": "^2.2.5",
     "cookies-js": "^1.2.2",
     "font-awesome": "^4.6.3",
@@ -56,6 +55,7 @@
     "assets-webpack-plugin": "^3.4.0",
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
+    "babel-plugin-root-import": "^5.1.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",

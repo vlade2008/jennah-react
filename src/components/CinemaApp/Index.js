@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import axios from 'axios';
-
+import * as firebase from "firebase";
 import * as movieActions from '../../actions/movieActions';
 
 
@@ -15,25 +15,18 @@ class Index extends React.Component {
     super(props)
   }
 
-  componentWillMount(){
-    axios.get('https://myproject-d1513.firebaseio.com/restapi')
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  componentDidMount(){
+    this.props.movieActions.getMovieList()
   }
+
+
+
+
 
   handleClick = (key) =>{
     return()=>{
       let payload = this.props.movie.data.movieList[key];
-      if (payload.status) {
-        _.merge(payload,{status:false})
-      }else {
-        _.merge(payload,{status:true})
-      }
-       this.props.movieActions.updateStatus(this.props.movie)
+       this.props.movieActions.upsertMovie(payload)
 
     }
   }
@@ -42,7 +35,8 @@ class Index extends React.Component {
 
   render() {
 
-    let displayMovie = this.props.movie.data.movieList.map((item,i)=>{
+
+    let displayMovie = this.props.movie.movieList.map((item,i)=>{
 
       let status;
 

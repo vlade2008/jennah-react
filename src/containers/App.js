@@ -1,4 +1,4 @@
-import React,{PropTypes} from 'react';
+import React from 'react';
 import {Button} from 'react-bootstrap'
 import Progress from "react-progress-2";
 import { routerActions } from 'react-router-redux'

@@ -25,6 +25,8 @@ import Index from '../components/Index'
 require('../fonts/sourcesanspro/css/fonts.css');
 require('font-awesome/css/font-awesome.css');
 require('../styles/bootstrap-less/bootstrap/bootstrap.less');
+require('../styles/layout.less');
+
 
 var initialState={
 
